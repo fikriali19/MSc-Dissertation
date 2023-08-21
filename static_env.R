@@ -1,3 +1,9 @@
+library(readxl)
+library(lpSolve)
+library(rJava)
+library(WriteXLS)
+setwd("/Users/fikriali/Desktop/Dissertation/Data")
+
 # model S2
 static_env_df = data.frame(read_excel(path="data.xlsx",sheet="s1_df"))
 df2 <- static_env_df[,-1]
