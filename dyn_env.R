@@ -9,7 +9,7 @@ setwd("/Users/fikriali/Desktop/Dissertation/Data")
 # model D2
 
 # dynamic data frame
-df_enviro = data.frame(read_excel(path="data.xlsx", sheet = "dynamic_3"))
+df_enviro = data.frame(read_excel(path="data.xlsx", sheet = "d2_df"))
 df2 <- df_enviro[,-1]
 rownames(df2) <- df_enviro[,1]
 df_enviro <- df2
