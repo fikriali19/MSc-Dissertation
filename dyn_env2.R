@@ -7,11 +7,13 @@ setwd("/Users/fikriali/Desktop/Dissertation/Data")
 # model D2*
 
 # dynamic data frame
-df_enviro = data.frame(read_excel(path="data.xlsx", sheet = "dyn_env_df2"))
+df_enviro = data.frame(read_excel(path="data.xlsx", sheet = "d2_df"))
 df2 <- df_enviro[,-1]
 rownames(df2) <- df_enviro[,1]
 df_enviro <- df2
 rm(df2)
+
+df_enviro = df_enviro[-c(10,11,15,18,19,26),] # remove France, Germany, Spain, Italy, Luxembourg and Malta
 
 m = 1 # variable inputs
 n = 2 # outputs
