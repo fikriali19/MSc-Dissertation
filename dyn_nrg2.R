@@ -8,11 +8,13 @@ rm(list = ls())
 # model D1*
 
 # dynamic data frame
-df_energy = data.frame(read_excel(path="data.xlsx", sheet = "dyn_nrg_df2"))
+df_energy = data.frame(read_excel(path="data.xlsx", sheet = "d1_df"))
 df2 <- df_energy[,-1]
 rownames(df2) <- df_energy[,1]
 df_energy <- df2
 rm(df2)
+
+df_energy = df_energy[-c(10,11,15,18,19,26),] # remove France, Germany, Italy, Spain, Luxembourg and Malta
 
 m = 3 # inputs
 n = 1 # outputs
