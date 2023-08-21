@@ -7,7 +7,7 @@ setwd("/Users/fikriali/Desktop/Dissertation/Data")
 # model S2*
 
 # static environmental data frame
-static_env_df = data.frame(read_excel(path="data.xlsx", sheet="static_env_df2"))
+static_env_df = data.frame(read_excel(path="data.xlsx", sheet="s2_df"))
 df2 <- static_env_df[,-1]
 rownames(df2) <- static_env_df[,1]
 static_env_df <- df2
