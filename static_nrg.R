@@ -1,5 +1,11 @@
+library(readxl)
+library(lpSolve)
+library(rJava)
+library(WriteXLS)
+setwd("/Users/fikriali/Desktop/Dissertation/Data")
+
 # model S1
-static_nrg_df = data.frame(read_excel(path="data.xlsx", sheet="s2_df"))
+static_nrg_df = data.frame(read_excel(path="data.xlsx", sheet="s1_df"))
 df2 <- static_nrg_df[,-1]
 rownames(df2) <- static_nrg_df[,1]
 static_nrg_df <- df2
