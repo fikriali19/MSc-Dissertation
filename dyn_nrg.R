@@ -10,7 +10,7 @@ rm(list = ls())
 # model D1
 
 # dynamic data frame
-df_energy = data.frame(read_excel(path="data.xlsx", sheet = "dynamic_1"))
+df_energy = data.frame(read_excel(path="data.xlsx", sheet = "d1_df"))
 df2 <- df_energy[,-1]
 rownames(df2) <- df_energy[,1]
 df_energy <- df2
