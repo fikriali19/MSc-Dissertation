@@ -1,3 +1,9 @@
+library(readxl)
+library(lpSolve)
+library(rJava)
+library(WriteXLS)
+setwd("/Users/fikriali/Desktop/Dissertation/Data")
+
 # model S2*
 
 # static environmental data frame
@@ -6,6 +12,8 @@ df2 <- static_env_df[,-1]
 rownames(df2) <- static_env_df[,1]
 static_env_df <- df2
 rm(df2)
+
+static_env_df = static_env_df[-c(10,11,18,19),] # remove France, germany, Luxembourg and Malta
 
 m = 2 # inputs
 n = 3 # outputs
